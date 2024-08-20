@@ -24,7 +24,7 @@ const Navbar = (props) => {
                                 <li><Link className="dropdown-item" to="/blogs">Card</Link></li>
                                 <li><Link className="dropdown-item" to="#">Another action</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+                                <li><Link className="dropdown-item" to="">Something else here</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
