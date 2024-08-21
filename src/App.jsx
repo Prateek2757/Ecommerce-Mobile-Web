@@ -5,7 +5,9 @@ import Alert from "./components/Alert";
 import Serviceitems from "./components/Serviceitems";
 import Carousel from "./components/Carousel";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
+import Home from "./components/Home";
+import About from "./components/About";
+import BlogState from "./Context/blogs/BlogState";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -37,7 +39,7 @@ function App() {
     }
   };
   return (
-    <>
+    <> <BlogState apiKey = {apiKey}>
       <Router>
         <div className={`bg-${mode} min-vh-100`}>
           <Navbar mode={mode} text={text} toggleMode={toggleMode} />
@@ -46,9 +48,11 @@ function App() {
           <Routes>
             <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
       </Router>
+      </BlogState>
     </>
   );
 }

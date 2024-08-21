@@ -16,6 +16,9 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/blogs">Card</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">About Us</Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
@@ -24,7 +27,7 @@ const Navbar = (props) => {
                                 <li><Link className="dropdown-item" to="/blogs">Card</Link></li>
                                 <li><Link className="dropdown-item" to="#">Another action</Link></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="">Something else here</Link></li>
+                                <li><Link className="dropdown-item" to="#">Something else here</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">

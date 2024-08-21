@@ -1,5 +1,5 @@
 import React from 'react'
-import I15pm from "../assets/iphone15promax.jpg";
+import I15pm from "../assets/iphone15promax.png";
 import G24u from "../assets/galaxys24ultra.jpg"
 import Op from "../assets/oneplus.png"
 function Carousel() {
@@ -12,7 +12,7 @@ function Carousel() {
       <img src={G24u} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src={I15pm} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
+    <img src='' className="w-100 "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
     </div>
     <div className="carousel-item">
     <img src={Op} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>

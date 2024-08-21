@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import coffee from '../assets/lamp.jpg'
-
-const Serviceitems = (props) => {
+import blogContext from '../Context/blogs/BlogContext'
+const Serviceitems = () => {
+    const context = useContext(blogContext)
+    const {article1,fetchData} = context
     // const articles = [
-    //     {
+    //     {   
     //         "source": {
     //             "id": "345",
     //             "name": "Google News"
@@ -31,20 +33,10 @@ const Serviceitems = (props) => {
     //     }
 
     // ]
-    const [article1, setArticle] = useState([])
-    //  console.log(article);
-    const fetchData =async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${props.apiKey}`
-        let data = await fetch(url)
-        let parseData= await data.json()
-        console.log(parseData);
-        setArticle(parseData.articles)
-
-        
-       }
-       useEffect (()=>{
+    useEffect(()=>{
         fetchData()
-       },[])
+    })
+  
     return (
         <div className='container'>
             <h4 className='service-heading my-3'>Our News</h4>
