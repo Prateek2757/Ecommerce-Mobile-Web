@@ -12,10 +12,10 @@ function Carousel() {
       <img src={G24u} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src='' className="w-100 "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
+    <img src={I15pm} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
     </div>
     <div className="carousel-item">
-    <img src={Op} className="w-100  "  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
+    <img src={Op} className="w-100"  style={{maxHeight : '675px', filter : 'brightness(40%)' }} alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

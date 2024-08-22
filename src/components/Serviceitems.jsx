@@ -39,7 +39,7 @@ const Serviceitems = () => {
   
     return (
         <div className='container'>
-            <h4 className='service-heading my-3'>Our News</h4>
+            <h4 className='service-heading my-3'>Our Brands</h4>
             <div className='row'>
                 {article1 && article1.slice(0,10).map((e) => {
 

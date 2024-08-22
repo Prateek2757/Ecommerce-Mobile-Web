@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Navbar.css"
  import { Link }from 'react-router-dom'
 const Navbar = (props) => {
     return (
-        <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+        <nav class="navbar" className={` navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`} style={{}}>
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">Navbar</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
