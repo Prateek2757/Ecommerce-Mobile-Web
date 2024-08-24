@@ -1,11 +1,15 @@
-import React from 'react'
-import "./Navbar.css"
- import { Link }from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { FaShoppingCart } from "react-icons/fa";
+import blogContext from '../Context/blogs/BlogContext';
+
 const Navbar = (props) => {
+    const context= useContext(blogContext)
+     const {state:{cart}}= context
     return (
-        <nav class="navbar" className={` navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`} style={{}}>
+        <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">Navbar</Link>
+                <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -15,26 +19,32 @@ const Navbar = (props) => {
                             <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/blogs">Card</Link>
+                            <Link className="nav-link" to="/blogs">Blogs</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/about">About Us</Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
-                            </Link>
+                            </a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><Link className="dropdown-item" to="/blogs">Card</Link></li>
-                                <li><Link className="dropdown-item" to="#">Another action</Link></li>
+                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><a className="dropdown-item" href="#">Another action</a></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+                                <li><a className="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link disabled" to="#" tabIndex="-1" aria-disabled="true">Disabled</Link>
-                        </li>
+                        <button type="button" className="btn btn-primary position-relative">
+                            <FaShoppingCart/>
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {cart.length}
+                                <span className="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
+
                     </ul>
+
                     {/* <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
