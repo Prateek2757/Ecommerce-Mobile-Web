@@ -10,6 +10,7 @@ import About from "./components/About";
 import BlogState from "./Context/blogs/BlogState";
 import Counter from "./components/Reduce";
 import Form from "./components/Reduce";
+import CartItems from "./components/CartItems";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -41,20 +42,23 @@ function App() {
     }
   };
   return (
-    <> <BlogState apiKey = {apiKey}>
-      <Router>
-        <div className={`bg-${mode} min-vh-100`}>
-          <Navbar mode={mode} text={text} toggleMode={toggleMode} />
-          <Alert alert={alert} showAlert={showAlert} />
+    <>
+      cd 
+      <BlogState apiKey={apiKey}>
+        <Router>
+          <div className={`bg-${mode} min-vh-100`}>
+            <Navbar mode={mode} text={text} toggleMode={toggleMode} />
+            <Alert alert={alert} showAlert={showAlert} />
 
-          <Routes>
-            <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/reduce" element={<Form />} />
-          </Routes>
-        </div>
-      </Router>
+            <Routes>
+              <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/reduce" element={<Form />} />
+              <Route path="/cart" element={<CartItems />} />
+            </Routes>
+          </div>
+        </Router>
       </BlogState>
     </>
   );

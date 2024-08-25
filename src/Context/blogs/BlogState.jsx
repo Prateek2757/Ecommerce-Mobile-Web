@@ -3,31 +3,28 @@ import blogContext from "./BlogContext";
 import { cartReducer } from "./Reducer";
 
 const BlogState = (props) => {
-  
-   const products = [
+  const products = [
     {
-      "id" : "12as",
-      "title" : "coffee",
-      "description" : "Himalyan coffe from Nepal",
-      "price" : 150
+      id: "12as",
+      title: "coffee",
+      description: "Himalyan coffe from Nepal",
+      price: 150,
+      inStock: 5,
     },
     {
-      "id" : "112as",
-      "title" : "tea",
-      "description" : "Himalyan tea from Nepal",
-      "price" : 100
-    }
-   ]
+      id: "112as",
+      title: "tea",
+      description: "Himalyan tea from Nepal",
+      price: 100,
+      inStock: 6,
+    },
+  ];
 
-   const [state,dispatch] = useReducer(cartReducer,
-    {
-      products : products,
-      cart:[]
-    }
-   )
-  
-  
-  
+  const [state, dispatch] = useReducer(cartReducer, {
+    products: products,
+    cart: [],
+  });
+
   //  console.log(article);
   // const fetchData = async () => {
   //   let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${props.apiKey}`;
@@ -40,7 +37,7 @@ const BlogState = (props) => {
   //   fetchData();
   // }, []);
   return (
-    <blogContext.Provider value={{ state,dispatch }}>
+    <blogContext.Provider value={{ state, dispatch }}>
       {props.children}
     </blogContext.Provider>
   );
