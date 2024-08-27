@@ -2,20 +2,21 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import blogContext from "../Context/blogs/BlogContext";
+import "./Navbar.css";
 
 const Navbar = (props) => {
   const context = useContext(blogContext);
   const {
     state: { cart },
   } = context;
+
   return (
-    <nav
-      className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
-    >
+    <nav className="navbar navbar-expand-lg custom-bgcolor">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        {/* Title with enhanced styling */}
+        <Link className="navbar-brand title" to="/">
+          MindRiser School
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,7 +31,7 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/home">
+              <Link className="nav-link" aria-current="page" to="/home">
                 Home
               </Link>
             </li>
@@ -44,57 +45,27 @@ const Navbar = (props) => {
                 About Us
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sign">
+                SignIn
+              </Link>
             </li>
-            <Link to="/cart">
-              <button
-                type="button"
-                className="btn btn-primary position-relative"
-              >
-                <FaShoppingCart />
+            
+          </ul>
+          {/* Cart button with badge */}
+          <Link to="/cart">
+            <button type="button" className="btn btn-primary position-relative">
+              <FaShoppingCart />
+              {cart.length > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {cart.length}
                   <span className="visually-hidden">unread messages</span>
                 </span>
-              </button>
-            </Link>
-          </ul>
-
-          {/* <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form> */}
-          <button className="btn btn-primary" onClick={props.toggleMode}>
+              )}
+            </button>
+          </Link>
+          {/* Mode toggle button */}
+          <button className="btn btn-primary ms-2" onClick={props.toggleMode}>
             {props.text}
           </button>
         </div>

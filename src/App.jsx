@@ -11,6 +11,8 @@ import BlogState from "./Context/blogs/BlogState";
 import Counter from "./components/Reduce";
 import Form from "./components/Reduce";
 import CartItems from "./components/CartItems";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -43,7 +45,6 @@ function App() {
   };
   return (
     <>
-      cd 
       <BlogState apiKey={apiKey}>
         <Router>
           <div className={`bg-${mode} min-vh-100`}>
@@ -54,6 +55,8 @@ function App() {
               <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/sign" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
               <Route path="/reduce" element={<Form />} />
               <Route path="/cart" element={<CartItems />} />
             </Routes>
