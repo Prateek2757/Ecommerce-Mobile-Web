@@ -1,0 +1,16 @@
+.card-img-top{
+    height: 1650px;
+    width: 100%;
+}
+.service-heading{
+    color: #f1bf0b;
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    max-width: fit-content;
+}
+.service-heading:hover{
+    color: #ffffff; 
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px rgba(241, 191, 11, 0.7); 
+}

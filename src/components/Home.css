@@ -1,0 +1,111 @@
+.home-main {
+    font-family: Arial, sans-serif;
+  }
+  
+  .content-section {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #136294, #2a0e41 60%, #00070c); /* Gradient background for modern look */
+    color: #fff; 
+    border-radius: 8px; 
+    
+  }
+  
+  .img-container {
+    flex: 1; /* it helps to control the size of Container*/
+    text-align: center;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+  }
+  
+  .about-us {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .about-us h2 {
+    color: #ccff00; 
+    margin-bottom: 10px;
+  }
+  
+  .about-us p {
+    color: hsl(0, 89%, 50%); 
+    line-height: 1.6;
+  }
+  
+  .signup-section {
+    background: linear-gradient(135deg, hsl(60, 12%, 97%), #7879aa 60%, #283276);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px; 
+    text-align: center;
+  }
+  
+  .signup-section h2 {
+    color: #333; 
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    max-width: 400px; 
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+  }
+  
+  .signup-button {
+    background-color: #00aaff;
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signup-button:hover {
+    background-color: #0094d8; 
+  }
+  .login-button{
+    text-decoration: none;
+    color:#00aaff
+  }
+  .login-button:hover{
+    color: #dcf805;
+  }
+  
+  .footer {
+    background-color: #56527e; 
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #c3ff00b2;
+  }
+  

@@ -1,74 +1,74 @@
-/* Navbar.css */
 
-/* Background gradient for navbar */
+
+
 .custom-bgcolor {
     background: linear-gradient(45deg, #181934, #2a2b5a);
   }
   
-  /* Title styling */
+  
   .title {
     color: #f1bf0b;
-    font-size: 1.5rem; /* Increase the font size for better visibility */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add smooth transition effects */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
   }
   
-  /* Title hover effect */
+  
   .title:hover {
-    color: #ffffff; /* Change color on hover */
-    transform: scale(1.1); /* Slightly increase size on hover */
-    text-shadow: 0 0 10px rgba(241, 191, 11, 0.7); /* Add glow effect on hover */
+    color: #ffffff; 
+    transform: scale(1.1); 
+    text-shadow: 0 0 10px rgba(241, 191, 11, 0.7); 
   }
   
-  /* Navbar links styling */
+  
   .nav-link {
     color: #f1bf0b;
     transition: color 0.3s ease-in-out;
   }
   
-  /* Navbar links hover effect */
+  
   .nav-link:hover {
     color: #ffffff;
   }
   .navbar-toggler {
-    border: none; /* Remove default border */
-    background-color: #f1bf0b; /* Background color for the button */
+    border: none; 
+    background-color: #f1bf0b; 
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   
   .navbar-toggler:hover {
-    background-color: #ffffff; /* Change background color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: #ffffff; 
+    transform: scale(1.1); 
   }
 
-  /* Navbar toggler icon */
+ 
   .navbar-toggler-icon {
-    background-color: #ffffff; /* Ensures toggler icon is visible */
-    border-radius: 3px; /* Rounds the edges for a softer look */
+    background-color: #ffffff; 
+    border-radius: 3px; 
   }
   
   
-  /* Cart button styling */
+ 
   .btn-primary {
     background-color: #f1bf0b;
-    border: none; /* Removes border for a cleaner look */
+    border: none; 
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   
-  /* Cart button hover effect */
+  
   .btn-primary:hover {
     background-color: #ffffff;
     color: #181934;
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px); 
   }
   
-  /* Cart badge styling */
+  
   .badge {
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Cart badge hover effect */
+   
   .btn-primary:hover .badge {
-    transform: scale(1.1); /* Slightly increase size on hover */
+    transform: scale(1.1); 
   }
   

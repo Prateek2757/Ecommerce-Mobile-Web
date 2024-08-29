@@ -47,10 +47,10 @@ function App() {
     <>
       <BlogState apiKey={apiKey}>
         <Router>
-          <div className={`bg-${mode} min-vh-100`}>
+          <div className="custom-bgcolor">
             <Navbar mode={mode} text={text} toggleMode={toggleMode} />
             <Alert alert={alert} showAlert={showAlert} />
-
+            
             <Routes>
               <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
               <Route path="/home" element={<Home />} />

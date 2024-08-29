@@ -13,9 +13,9 @@ const Navbar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg custom-bgcolor">
       <div className="container-fluid">
-        {/* Title with enhanced styling */}
-        <Link className="navbar-brand title" to="/">
-          MindRiser School
+       
+        <Link className="navbar-brand title" to="/home">
+          Mobile Hub
         </Link>
         <button
           className="navbar-toggler"
@@ -52,7 +52,7 @@ const Navbar = (props) => {
             </li>
             
           </ul>
-          {/* Cart button with badge */}
+          
           <Link to="/cart">
             <button type="button" className="btn btn-primary position-relative">
               <FaShoppingCart />
@@ -64,7 +64,7 @@ const Navbar = (props) => {
               )}
             </button>
           </Link>
-          {/* Mode toggle button */}
+          
           <button className="btn btn-primary ms-2" onClick={props.toggleMode}>
             {props.text}
           </button>

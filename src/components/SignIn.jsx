@@ -14,7 +14,7 @@ function SignIn() {
     <div className="container">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
+          <label htmlFor="exampleInputEmail1" className="form-label text-warning">
             Email address
           </label>
           <input
@@ -28,7 +28,7 @@ function SignIn() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label text-warning">
             Password
           </label>
           <input
@@ -45,7 +45,7 @@ function SignIn() {
           Submit
         </button>
       </form>
-      <h6>Not Register?</h6>
+      <h6 className="text-warning"> Not Register?</h6>
       <Link className="nav-link" to="/signup">
         SignUp
       </Link>

@@ -2,13 +2,16 @@ import { useState, useEffect, useReducer } from "react";
 import blogContext from "./BlogContext";
 import { cartReducer } from "./Reducer";
 
+import s24u from"../../assets/galaxys24ultra.jpg" 
+import oneplus from"../../assets/iphone15promax.png" 
 const BlogState = (props) => {
   const products = [
     {
       id: "12as",
-      title: "coffee",
+      title: "SamSung Galaxy S24 Ultra",
       description: "Himalyan coffe from Nepal",
-      price: 150,
+      price: 150000,
+      img: s24u,
       inStock: 5,
     },
     {
@@ -16,6 +19,7 @@ const BlogState = (props) => {
       title: "tea",
       description: "Himalyan tea from Nepal",
       price: 100,
+      img:oneplus,
       inStock: 6,
     },
   ];
