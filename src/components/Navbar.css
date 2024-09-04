@@ -1,74 +1,91 @@
+/* Navbar Styles */
 
+.custom-navbar {
+  background-color: #1a1a2e; /* Dark background */
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #ff5722;
+}
 
+.custom-navbar .navbar-brand {
+  color: #ffeb3b; /* Bright yellow for brand name */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
 
-.custom-bgcolor {
-    background: linear-gradient(45deg, #181934, #2a2b5a);
-  }
-  
-  
-  .title {
-    color: #f1bf0b;
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
-  }
-  
-  
-  .title:hover {
-    color: #ffffff; 
-    transform: scale(1.1); 
-    text-shadow: 0 0 10px rgba(241, 191, 11, 0.7); 
-  }
-  
-  
-  .nav-link {
-    color: #f1bf0b;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  
-  .nav-link:hover {
-    color: #ffffff;
-  }
-  .navbar-toggler {
-    border: none; 
-    background-color: #f1bf0b; 
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .navbar-toggler:hover {
-    background-color: #ffffff; 
-    transform: scale(1.1); 
-  }
+.custom-navbar .navbar-brand:hover {
+  color: #ff9800; /* Orange color on hover */
+}
 
- 
-  .navbar-toggler-icon {
-    background-color: #ffffff; 
-    border-radius: 3px; 
-  }
-  
-  
- 
-  .btn-primary {
-    background-color: #f1bf0b;
-    border: none; 
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  
-  .btn-primary:hover {
-    background-color: #ffffff;
-    color: #181934;
-    transform: translateY(-2px); 
-  }
-  
-  
-  .badge {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-   
-  .btn-primary:hover .badge {
-    transform: scale(1.1); 
-  }
-  
+.navbar-toggler {
+  border-color: #ffeb3b; /* Toggler button color */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffeb3b; /* Toggler icon color */
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff; /* White color for links */
+  font-size: 1rem;
+  padding: 8px 15px;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.custom-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: #ff5722;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.custom-navbar .cart-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 1.4rem;
+  padding: 5px 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.custom-navbar .cart-button:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+.custom-navbar .toggle-mode {
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-navbar .toggle-mode:hover {
+  background-color: #e64a19;
+  transform: translateY(-5px);
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}

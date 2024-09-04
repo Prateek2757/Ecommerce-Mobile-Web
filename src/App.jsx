@@ -51,9 +51,10 @@ function App() {
             <Navbar mode={mode} text={text} toggleMode={toggleMode} />
             <Alert alert={alert} showAlert={showAlert} />
             
+            
             <Routes>
               <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
-              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/sign" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />

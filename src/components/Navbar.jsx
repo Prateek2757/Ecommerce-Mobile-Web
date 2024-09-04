@@ -11,10 +11,9 @@ const Navbar = (props) => {
   } = context;
 
   return (
-    <nav className="navbar navbar-expand-lg custom-bgcolor">
+    <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
-       
-        <Link className="navbar-brand title" to="/home">
+        <Link className="navbar-brand title" to="/">
           Mobile Hub
         </Link>
         <button
@@ -31,7 +30,7 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/home">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
               </Link>
             </li>
@@ -50,22 +49,21 @@ const Navbar = (props) => {
                 SignIn
               </Link>
             </li>
-            
           </ul>
           
           <Link to="/cart">
-            <button type="button" className="btn btn-primary position-relative">
+            <button type="button" className="btn cart-button position-relative">
               <FaShoppingCart />
               {cart.length > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {cart.length}
-                  <span className="visually-hidden">unread messages</span>
+                  <span className="visually-hidden">items in cart</span>
                 </span>
               )}
             </button>
           </Link>
-          
-          <button className="btn btn-primary ms-2" onClick={props.toggleMode}>
+
+          <button className="btn toggle-mode ms-2" onClick={props.toggleMode}>
             {props.text}
           </button>
         </div>

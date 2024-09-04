@@ -20,70 +20,82 @@ function CartItems() {
     <>
       <div className="container home">
         <div className="productContainer-cart">
-          <ul className="list-group">
-            {cart.map((prod) => {
-              return (
-                <li className="list-group-item cart-item" key={prod.id}>
-                  <div className="row align-items-center">
-                    <div className="col-md-2">
-                      <img
-                        src={coffee}
-                        alt={prod.title}
-                        className="img-fluid cart-item-image"
-                      />
+          {cart.length === 0 ? (
+            <div className="empty-cart">
+              <h3>Your cart is empty</h3>
+              <p>Add some items to your cart to see them here.</p>
+            </div>
+          ) : (
+            <>
+              <ul className="list-group">
+                {cart.map((prod) => (
+                  <li className="list-group-item cart-item" key={prod.id}>
+                    <div className="row align-items-center">
+                      <div className="col-md-2">
+                        <img
+                          src={coffee}
+                          alt={prod.title}
+                          className="img-fluid cart-item-image"
+                        />
+                      </div>
+                      <div className="col-md-3 cart-item-details">
+                        <h5 className="cart-item-title">{prod.title}</h5>
+                        <p className="cart-item-price">
+                          Rs.{prod.price.toFixed(2)}
+                        </p>
+                      </div>
+                      <div className="col-md-2">
+                        <select
+                          value={prod.qty}
+                          onChange={(e) =>
+                            dispatch({
+                              type: "CHANGE_CART_QTY",
+                              payload: {
+                                id: prod.id,
+                                qty: Number(e.target.value),
+                              },
+                            })
+                          }
+                          className="form-control cart-item-select"
+                        >
+                          {[...Array(prod.inStock).keys()].map((x) => (
+                            <option key={x + 1} value={x + 1}>
+                              {x + 1}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="col-md-3 cart-item-total">
+                        <p>
+                          Total: Rs.{(prod.price * prod.qty).toFixed(2)}
+                        </p>
+                      </div>
+                      <div className="col-md-2">
+                        <button
+                          type="button"
+                          className="btn btn-light cart-item-delete"
+                          onClick={() =>
+                            dispatch({
+                              type: "REMOVE_FROM_CART",
+                              payload: prod,
+                            })
+                          }
+                        >
+                          <MdDelete />
+                        </button>
+                      </div>
                     </div>
-                    <div className="col-md-3 cart-item-details">
-                      <h5 className="cart-item-title">{prod.title}</h5>
-                      <p className="cart-item-price">
-                        ${prod.price.toFixed(2)}
-                      </p>
-                    </div>
-                    <div className="col-md-3">
-                      <select
-                        value={prod.qty}
-                        onChange={(e) =>
-                          dispatch({
-                            type: "CHANGE_CART_QTY",
-                            payload: {
-                              id: prod.id,
-                              qty: Number(e.target.value),
-                            },
-                          })
-                        }
-                        className="form-control cart-item-select"
-                      >
-                        {[...Array(prod.inStock).keys()].map((x) => (
-                          <option key={x + 1} value={x + 1}>
-                            {x + 1}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="col-md-2">
-                      <button
-                        type="button"
-                        className="btn btn-light cart-item-delete"
-                        onClick={() =>
-                          dispatch({
-                            type: "REMOVE_FROM_CART",
-                            payload: prod,
-                          })
-                        }
-                      >
-                        <MdDelete />
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="filter summary">
-          <div className="summary-details">
-            <h4>Total items: ({cart.length})</h4>
-            <h4>Total: Rs.{Total.toFixed(2)}</h4>
-          </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="filter summary">
+                <div className="summary-details">
+                  <h4>Total items: ({cart.length})</h4>
+                  <h4>Total: Rs.{Total.toFixed(2)}</h4>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>
