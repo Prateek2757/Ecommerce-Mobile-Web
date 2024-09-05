@@ -7,7 +7,7 @@
   padding: 20px;
 }
 
-/* Global and Home Section Styles */
+
 
 .hero-section {
   position: relative;
@@ -105,7 +105,8 @@
 }
 
 .about-us-logo {
-  width: 150px;
+  width: 200px;
+  height: 175px;
   margin-right: 20px;
   transition: transform 0.3s ease;
 }
@@ -124,20 +125,210 @@
   color: #383737;
 }
 
+.services-section{
+  text-align: center;
+  margin: 10px;
+  background-color: #469dc0;
+  border-radius: 8px; 
+
+}
+
+.services-title{
+  font-size: 32px;
+  padding-top: 10px;
+  margin-bottom:10px;
+   color: #333;
+}
+
+.services-subtitle{
+  font-size: 18px;
+  margin-bottom: 30px;
+  color:#600;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.services-container{
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  flex-wrap:wrap ;
+  margin: 0 auto;
+}
+
+.service-card{
+  background-color: #fff;
+
+  padding:20px;
+  border-radius: 8px;
+  width: 30%;
+  min-height: 300px;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.service-card:hover{
+  transform: translateY(-10px);  
+
+}
+
+.service-icon {
+  font-size: 48px;
+  color: #72b6c5;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Container for all testimonial cards */
+.testimonial-intro {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.testimonial-intro h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-intro p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background: url('../assets/bgphone.jpg') no-repeat center center/cover;
+}
+
+.testtomonial-card {
+  background-color: #fff;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 30%;
+  background: url('../assets/iphonebg.jpg') no-repeat center center/cover;
+  min-width: 280px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testtomonial-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Testimonial Card Image */
+.testtomonail-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  border: 4px solid #A6A57A;
+}
+
+/* Testimonial Text */
+.testtomonial-card h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.testtomonial-card h4 {
+  font-size: 16px;
+  color: #556515;
+  margin-bottom: 15px;
+}
+
+.testtomonial-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.testtomonial-card p::before {
+  content: "“";
+  font-size: 40px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #161616;
+  opacity: 0.4;
+}
+
+.testtomonial-card p::after {
+  content: "”";
+  font-size: 40px;
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  color: #726e6e;
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testtomonial-card {
+    width: 90%;
+  }
+}
+
+.signup-main{
+  opacity: 0.9;
+  border-radius: 8px;
+  background: url('../assets/bgphonewhite.jpg') no-repeat center center/cover;
+}
 .signup-section {
-  background: #fff;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   max-width: 600px;
   margin: 0 auto;
+  
+  background: linear-gradent(135deg, #8aa1f19e, #c673a1);
   text-align: center;
+
   transform-style: preserve-3d;
   transition: transform 0.3s ease;
 }
 
 .signup-section:hover {
-  transform: translateY(-10px) rotateX(-10deg);
+  transform: translateY(-px) rotateX(-10deg);
 }
 
 .signup-section h2 {
@@ -152,13 +343,14 @@
 
 .signup-form label {
   display: block;
-  color: #666;
+  color: #000000;
   margin-bottom: 5px;
 }
 
 .signup-form input,
 .signup-form textarea {
   width: 100%;
+  opacity: 0.9;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -193,7 +385,7 @@
   color: #ff5722;
   text-decoration: none;
   margin-left: 5px;
-  flex-direction: column;
+  
   font-weight: 600;
 }
 
@@ -202,10 +394,11 @@
 }
 
 .footer {
-  background-color: #333;
+  background: url('../assets/bgphone.jpg') no-repeat center center/cover;
   color: #fff;
   padding: 40px 20px;
   display: flex;
+  border-radius: 8px;
   flex-direction: column;
   align-items: center;
 }
@@ -220,7 +413,7 @@
 }
 
 .footer-logo img {
-  width: 100px;
+  width: 150px;
   margin-bottom: 10px;
 }
 
@@ -233,7 +426,7 @@
 .footer-links h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #ff5722;
+  color: #e87810;
 }
 
 .footer-links ul {
@@ -246,7 +439,7 @@
 }
 
 .footer-links a {
-  color: #fff;
+  color: #f6f1f1;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -265,7 +458,7 @@
 .footer-social h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #ff5722;
+  color: #dd900b;
 }
 
 .social-icons {
