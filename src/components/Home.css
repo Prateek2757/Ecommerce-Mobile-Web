@@ -128,7 +128,7 @@
 .services-section{
   text-align: center;
   margin: 10px;
-  background-color: #469dc0;
+  background:linear-gradient(135deg,#469dc0,purple) ;
   border-radius: 8px; 
 
 }
@@ -137,13 +137,13 @@
   font-size: 32px;
   padding-top: 10px;
   margin-bottom:10px;
-   color: #333;
+   color: #c32828;
 }
 
 .services-subtitle{
   font-size: 18px;
   margin-bottom: 30px;
-  color:#600;
+  color:rgb(164, 14, 14);
   margin-left: auto;
   margin-right: auto;
 
@@ -153,13 +153,12 @@
   display: flex;
   justify-content: space-around;
   max-width: 1200px;
-  flex-wrap:wrap ;
+  flex-wrap:wra ;
   margin: 0 auto;
 }
 
 .service-card{
-  background-color: #fff;
-
+ background: url('../assets/phoneass.avif')no-repeat center/cover;
   padding:20px;
   border-radius: 8px;
   width: 30%;
@@ -184,13 +183,13 @@
 
 .service-card h3 {
   font-size: 20px;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .service-card p {
   font-size: 16px;
-  color: #666;
+  color: #dbcfcf;
   line-height: 1.5;
 }
 

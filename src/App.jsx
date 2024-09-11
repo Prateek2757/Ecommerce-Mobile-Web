@@ -13,6 +13,7 @@ import Form from "./components/Reduce";
 import CartItems from "./components/CartItems";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import AddProduct from "./components/AddProduct";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -23,6 +24,7 @@ function App() {
   const [alert, setAlert] = useState(null);
 
   const showAlert = (type, message) => {
+    
     setAlert({
       type: type,
       message: message,
@@ -50,16 +52,16 @@ function App() {
           <div className="custom-bgcolor">
             <Navbar mode={mode} text={text} toggleMode={toggleMode} />
             <Alert alert={alert} showAlert={showAlert} />
-            
-            
+
             <Routes>
               <Route path="/blogs" element={<Serviceitems apiKey={apiKey} />} />
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/sign" element={<SignIn />} />
-              <Route path="/signup" element={<SignUp />} />
+              <Route path="/sign" element={<SignIn showAlert={showAlert} />} />
+              <Route path="/signup" element={<SignUp alert={alert} showAlert={showAlert} />} />
               <Route path="/reduce" element={<Form />} />
               <Route path="/cart" element={<CartItems />} />
+              <Route path="/addproduct" element={<AddProduct alert={alert} showAlert={showAlert} />} />
             </Routes>
           </div>
         </Router>

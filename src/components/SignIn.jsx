@@ -1,10 +1,32 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
-function SignIn() {
+function SignIn(props) {
+  const navigate = useNavigate();
   const [credentail, setCredentail] = useState({ email: "", password: "" });
-  const handleSubmit = () => {
-    console.log("This is handle submit");
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+      const {email,password} = credentail;
+      const response = await fetch("http://localhost:5000/api/auth/login",{
+        method:'Post',
+        headers :{
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({email,password})
+      })
+
+      const json = await response.json()
+      
+      if(json.authToken){
+         localStorage.setItem("token",json.authToken)
+         navigate("/")
+         props.showAlert('Login Sucessful',"Sucess")
+      }
+      else{
+     props.showAlert('Invalid Credential',"Try Again")
+      }
+  
+
   };
    const handleChange = (e)=>{
        setCredentail({...credentail,[e.target.name]:e.target.value})

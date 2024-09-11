@@ -12,13 +12,13 @@ import {
   FaHeadphonesAlt,
   FaBatteryFull,
 } from "react-icons/fa";
-
+import { ReactTyped } from "react-typed";
 function Home() {
   return (
     <div className="home-main">
       <div className="hero-section">
         <div className="hero-overlay">
-          <h1 className="hero-title">Welcome to Mobile Hub</h1>
+          <h1 className="hero-title"> WelCome to <ReactTyped strings={[' Mobile Hub']} typeSpeed={150} loop backSpeed={50} cursorChar='📱' showCursor={true}/></h1>
           <p className="hero-subtitle">
             Discover the Future of Mobile Technology
           </p>
@@ -206,7 +206,7 @@ function Home() {
             Sign Up
           </button>
         </form>
-        <div className="login-prompt text-white">
+        <div className="login-prompt ">
           Already Registered?
           <Link className="login-button" to="/sign">
             Login
@@ -243,16 +243,16 @@ function Home() {
           <div className="footer-social">
             <h4>Follow Us</h4>
             <div className="social-icons">
-              <a href="https://www.facebook.com">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
-              <a href="https://www.twitter.com">
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                 <FaTwitter />
               </a>
-              <a href="https://www.instagram.com">
+              <a href="https://www.instagram.com"target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
-              <a href="https://www.linkedin.com">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </a>
             </div>
