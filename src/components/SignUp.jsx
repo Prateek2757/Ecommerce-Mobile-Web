@@ -6,6 +6,7 @@ const Signup = (props) => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" })
     const navigate = useNavigate();
 
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { name, email, password } = credentials

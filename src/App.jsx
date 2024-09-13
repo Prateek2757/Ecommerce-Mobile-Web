@@ -47,7 +47,7 @@ function App() {
   };
   return (
     <>
-      <BlogState apiKey={apiKey}>
+      <BlogState apiKey={apiKey} showAlert={showAlert} >
         <Router>
           <div className="custom-bgcolor">
             <Navbar mode={mode} text={text} toggleMode={toggleMode} />

@@ -8,16 +8,19 @@ function CartItems() {
   const context = useContext(blogContext);
   const {
     state: { cart },
-    dispatch,
+    dispatch
   } = context;
 
   console.log(cart);
-
+  
+   console.log("aaaa");
+   
   // Calculate total price
   const Total = cart.reduce((acc, curr) => acc + curr.price * curr.qty, 0);
 
   return (
     <>
+    <h1>hii</h1>
       <div className="container home">
         <div className="productContainer-cart">
           {cart.length === 0 ? (
