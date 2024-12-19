@@ -1,16 +1,122 @@
-.card-img-top{
-    height: 1650px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Service Heading */
+  .service-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Card Layout */
+  .card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%; /* Ensures cards have consistent height */
+    display: flex;
+    flex-direction: column; /* Align card content vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+  }
+  
+  /* Image Styling */
+  .card-img-top {
+    width: 100%; /* Ensures image stretches to the card width */
+    height: 180px; /* Sets a fixed height for images */
+    object-fit: cover; /* Prevents image distortion */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Card Body */
+  .card-body {
+    flex: 1; /* Makes card body take up the remaining space */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Title Styling */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Price Text */
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Buttons */
+  .card .btn {
+    margin-top: 10px;
+    width: 100%; /* Makes buttons stretch to full card width */
+  }
+  
+  /* Menu Options */
+  .menu-options {
+    position: absolute;
+    top: 85px;
+    right: 10px;
+    
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .menu-options button {
+    display: block;
     width: 100%;
-}
-.service-heading{
-    color: #f1bf0b;
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
-    max-width: fit-content;
-}
-.service-heading:hover{
-    color: #ffffff; 
-    transform: scale(1.1); 
-    text-shadow: 0 0 10px rgba(241, 191, 11, 0.7); 
-}
+    padding: 10px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-options button:hover {
+    background-color: #f8f8f8;
+  }
+  
+  /* Modal */
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-dialog {
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .modal-content {
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 150px;
+    }
+  
+    .service-heading {
+      font-size: 1.5rem;
+    }
+  }
+  

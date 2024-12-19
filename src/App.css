@@ -1,3 +1,7 @@
 .custom-bgcolor{
     background: linear-gradient(45deg, #181934, #2a2b5a);
 }
+.three-dots{
+    display: flex;
+    justify-content: space-between;
+}

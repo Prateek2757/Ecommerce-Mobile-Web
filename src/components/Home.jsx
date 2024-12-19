@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link , useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
 import "./Home.css";
 import logo from "../assets/mobilelogo.jpg";
@@ -14,6 +14,18 @@ import {
 } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 function Home() {
+
+  // const navigate = useNavigate();
+
+  // useEffect(()=>{
+     
+  //   const authToken = localStorage.getItem('token')
+  //   if(!authToken){
+  //       navigate('/sign')
+  //   } 
+
+  // },navigate)
+
   return (
     <div className="home-main">
       <div className="hero-section">

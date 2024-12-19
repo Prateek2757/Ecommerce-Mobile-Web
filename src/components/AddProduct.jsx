@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 const Addproduct = (props) => {
     const [product, setProduct] = useState({
@@ -84,7 +85,7 @@ const Addproduct = (props) => {
                     <label htmlFor="image" className="form-label">Choose images</label>
                     <input type="file" name='image' multiple onChange={handleChange} className="form-control" id="image" />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <Link to="/blogs"> <button type="submit" className="btn btn-primary">Submit</button></Link>
             </form>
         </div>
     )

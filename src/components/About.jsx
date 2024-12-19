@@ -5,7 +5,7 @@ function About() {
     
   return (
    <><p>
-    ccc
+    
    </p>
    </>
   )

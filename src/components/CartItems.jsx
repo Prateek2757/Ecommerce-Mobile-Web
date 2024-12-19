@@ -35,11 +35,7 @@ function CartItems() {
                   <li className="list-group-item cart-item" key={prod.id}>
                     <div className="row align-items-center">
                       <div className="col-md-2">
-                        <img
-                          src={coffee}
-                          alt={prod.title}
-                          className="img-fluid cart-item-image"
-                        />
+                      <img src={`http://localhost:5000/uploads/${prod.images}`} alt={prod.name} className='img-fluid rounded'></img>
                       </div>
                       <div className="col-md-3 cart-item-details">
                         <h5 className="cart-item-title">{prod.title}</h5>
@@ -54,14 +50,14 @@ function CartItems() {
                             dispatch({
                               type: "CHANGE_CART_QTY",
                               payload: {
-                                id: prod.id,
+                                _id: prod._id,
                                 qty: Number(e.target.value),
                               },
                             })
                           }
                           className="form-control cart-item-select"
                         >
-                          {[...Array(prod.inStock).keys()].map((x) => (
+                          {[...Array(prod.instock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>
                               {x + 1}
                             </option>
